@@ -148,7 +148,7 @@ export const EDUCATION_DATA: EducationItem[] = [
     streamOrMajor: "Computer Science & Engineering (Artificial Intelligence)",
     iconType: "university",
     details: [
-      "Board / Affiliate: JNTU-GV • Academic standing: CGPA: 7.96",
+      "Board / Affiliate: JNTU-GV",
       "Specializing in Machine Learning models, Computer Vision basics, and intelligent automation systems.",
       "Engaged in data-driven engineering, Object-Oriented Programming (OOP), Data Structures and Algorithms.",
       "Actively building project frameworks with Python, SQL, OpenCV, and modern web integration stacks."
@@ -162,7 +162,7 @@ export const EDUCATION_DATA: EducationItem[] = [
     streamOrMajor: "Mathematics, Physics, Chemistry (MPC)",
     iconType: "college",
     details: [
-      "Board: BIE AP • Academic evaluation: Marks: 752",
+      "Board: BIE AP",
       "Mastered fundamental advanced mathematics, molecular structures, and physical sciences.",
       "Cultivated a persistent analytical mindset and problem-solving capability."
     ]
@@ -175,7 +175,7 @@ export const EDUCATION_DATA: EducationItem[] = [
     streamOrMajor: "General Secondary Curriculum",
     iconType: "school",
     details: [
-      "Board: BSE AP • Academic excellence: GPA: 9.93",
+      "Board: BSE AP",
       "Instilled highly robust foundational logical and scientific structures.",
       "Discovered an early, intense interest in computational logic and technology frameworks."
     ]

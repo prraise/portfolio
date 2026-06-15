@@ -291,19 +291,16 @@ EDUCATIONAL QUALIFICATIONS
    - Institution: Vignan's Institute of Engineering for Women, Vizag
    - Affiliate: JNTU-GV
    - Duration: 2023 - Present
-   - Grade: CGPA: 7.96
 
 2. MPC (Intermediate - Class XII)
    - Institution: St. Joseph College for Women, Visakhapatnam
    - Board: BIE AP
    - Duration: 2021 - 2023
-   - Evaluation: Marks: 752
 
 3. SSC (Secondary School - Class X)
    - Institution: Jamia English Medium High School, Visakhapatnam
    - Board: BSE AP
    - Duration: 2020 - 2021
-   - Evaluation: GPA: 9.93
 
 TECHNICAL SKILLS
 ----------------
@@ -572,7 +569,7 @@ PROJECTS HIGH-LEVEL HIGH-LIGHTS
                       Bachelor of Technology (BTech) in CSE (AI)
                     </h4>
                     <p className="text-xs font-sans font-bold text-purple-600 mt-1">
-                      Vignan's Institute of Engineering for Women • CGPA: 7.96
+                      Vignan's Institute of Engineering for Women
                     </p>
 
                     <div className="mt-4 pt-3.5 border-t border-purple-50 space-y-2 text-xs font-sans text-[#475569] font-medium leading-relaxed">
@@ -654,7 +651,7 @@ PROJECTS HIGH-LEVEL HIGH-LIGHTS
                       MPC (Intermediate - Class XII)
                     </h4>
                     <p className="text-xs font-sans font-bold text-pink-600 mt-1">
-                      St. Joseph College for Women, Visakhapatnam • Score: 752 / 1000
+                      St. Joseph College for Women, Visakhapatnam
                     </p>
 
                     <div className="mt-4 pt-3.5 border-t border-purple-50 space-y-2 text-xs font-sans text-[#475569] font-medium leading-relaxed">
@@ -689,7 +686,7 @@ PROJECTS HIGH-LEVEL HIGH-LIGHTS
                       Jamia English Medium High School
                     </h4>
                     <p className="text-xs font-sans font-bold text-emerald-600 mt-1">
-                      Visakhapatnam • GPA: 9.93 / 10.0
+                      Visakhapatnam
                     </p>
 
                     <div className="mt-4 pt-3.5 border-t border-purple-50 space-y-2 text-xs font-sans text-[#475569] font-medium leading-relaxed">
