@@ -1,0 +1,105 @@
+================================================================================
+MAGAPU PRAISE
+Visakhapatnam, Andhra Pradesh, India
+Phone: +91-8919538026
+Email: prraisee@gmail.com
+LinkedIn: https://www.linkedin.com/in/praise-m-0780352b8
+Portfolio: https://portfolio-praise.app
+================================================================================
+
+CAREER OBJECTIVE
+----------------
+Computer Science (AI) undergraduate seeking an AI/ML or Software Development 
+Internship to apply Python, SQL, and Machine Learning fundamentals in building 
+data-driven, scalable solutions. Strong foundation in algorithms, OOP, and 
+problem-solving with hands-on project experience in computer vision and 
+sustainability-focused applications.
+
+
+EDUCATIONAL QUALIFICATIONS
+--------------------------
+1. Bachelor of Technology (BTech) in Computer Science & Engineering (AI)
+   - Institution: Vignan's Institute of Engineering for Women, Vizag
+   - Affiliate: JNTU-GV
+   - Duration: 2023 - Present
+   - Grade: CGPA: 7.96
+
+2. MPC (Intermediate - Class XII)
+   - Institution: St. Joseph College for Women, Visakhapatnam
+   - Board: BIE AP
+   - Duration: 2021 - 2023
+   - Evaluation: Marks: 752
+
+3. SSC (Secondary School - Class X)
+   - Institution: Jamia English Medium High School, Visakhapatnam
+   - Board: BSE AP
+   - Duration: 2020 - 2021
+   - Evaluation: GPA: 9.93
+
+
+TECHNICAL SKILLS
+----------------
+- Programming: Python, SQL
+- AI/ML Concepts: Machine Learning, Artificial Intelligence, Computer Vision Basics
+- Core CS Concepts: Data Structures, OOP, Functions, Control Statements
+- Tools & Platforms: OpenCV, MS PowerPoint, GitHub, VS Code, Google AI Studio
+- Soft Skills: Communication, Team Collaboration, Adaptability
+
+
+PROJECT EXPERIENCE
+------------------
+1. AI-Based Automated Attendance System (Computer Vision)
+   - Developed a real-time face recognition attendance system using Python and OpenCV.
+   - Implemented automated tracking to improve accuracy and reduce manual processing.
+
+2. Eco Bloom - Smart Urban Greenery Planner
+   - Designed a prototype sustainability-focused application with soil detection and plant recommendation features.
+   - Integrated green mapping concepts to support smart city eco-planning.
+
+3. Sun Saver - Solar Energy Awareness Initiative
+   - Built a web-based calculator for monthly/yearly solar energy usage analysis.
+   - Promoted renewable energy adoption through data-driven awareness solutions.
+
+
+CERTIFICATIONS & TECHNICAL EXPOSURE
+----------------------------------
+- AI Internship Certification - Data Valley
+- AI ASCEND by Accenture (Data Processing, Data Acquisition, EDA)
+- Cybersecurity & Ethical Hacking Workshop
+- Full Stack Development - Infosys Springboard
+- National STTP - Java Full Stack with React JS & AI
+- Participated in 24-hour Google WOW Hackathon & College Ideathon
+
+
+PERSONALITY TRAITS & STRENGTHS
+------------------------------
+- Fast learner with a strong enthusiasm for emerging technologies and innovation.
+- Highly organized, proactive, and dedicated to ongoing personal and professional growth.
+- Collaborative team member with effective communication and interpersonal skills.
+
+
+CO-CURRICULAR & EXTRA-CURRICULAR ACTIVITIES
+-------------------------------------------
+- Participated in a 24-hour Google WOW Hackathon at GITAM and a college ideathon.
+- Actively involved in technical events and workshops.
+- Completed a virtual AI Internship at Data Valley, gaining experience in AI/ML fundamentals and basic model development.
+
+
+PERSONAL DETAILS
+----------------
+- Father's Name: M. Srinivasa Rao
+- Date of Birth: 11-03-2006
+- Nationality: Indian
+- Languages Known: English, Hindi, Telugu
+- Hobbies / Interests: Reading | Listening to Music
+- Permanent Address: Visakhapatnam, Andhra Pradesh
+
+
+DECLARATION
+-----------
+I hereby declare that all the information provided above is true and correct to the best of my knowledge and belief.
+
+Date: June 15, 2026
+Place: Visakhapatnam
+Candidate: Magapu Praise
+================================================================================

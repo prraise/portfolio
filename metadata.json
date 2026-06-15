@@ -1,0 +1,6 @@
+{
+  "name": "Praise Portfolio",
+  "description": "A premium, modern portfolio for Praise, showcasing specialization in Computer Science, Artificial Intelligence, and Web Development.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
