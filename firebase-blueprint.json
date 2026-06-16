@@ -1,0 +1,46 @@
+{
+  "entities": {
+    "message": {
+      "title": "Contact Message",
+      "description": "Standard schema for visitor submissions containing contact details and structured inquiry content.",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The full name of the sender."
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "description": "Verification return route for replying to the inquiry."
+        },
+        "subject": {
+          "type": "string",
+          "description": "Topic category or title summary for the message."
+        },
+        "message": {
+          "type": "string",
+          "description": "Body description matching the question or discussion."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "The precise Firestore server timestamp at database transaction point."
+        }
+      },
+      "required": [
+        "name",
+        "email",
+        "subject",
+        "message",
+        "createdAt"
+      ]
+    }
+  },
+  "firestore": {
+    "messages/{messageId}": {
+      "schema": "message",
+      "description": "Database container storing submitted portfolio contact form rows with write-only rules for safety."
+    }
+  }
+}

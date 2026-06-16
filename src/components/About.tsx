@@ -1,4 +1,5 @@
 import { Brain, Code2, GraduationCap, Zap, ArrowDownCircle, BadgeAlert } from "lucide-react";
+const profileImage = "https://files.catbox.moe/2v4y4d.jpeg";
 
 export function About() {
   const traits = [
@@ -51,52 +52,16 @@ export function About() {
                   <span className="w-2 h-2 rounded-full bg-emerald-400/80" />
                 </div>
                 
-                {/* Abstract Vector avatar showing Developer with glasses + glowing AI nodes */}
-                <svg
-                  className="w-40 h-40 text-purple-200 my-4"
-                  viewBox="0 0 100 100"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <defs>
-                    <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#A78BFA" />
-                      <stop offset="50%" stopColor="#93C5FD" />
-                      <stop offset="100%" stopColor="#F9A8D4" />
-                    </linearGradient>
-                  </defs>
-                  
-                  {/* Background Aura */}
-                  <circle cx="50" cy="50" r="45" fill="rgba(245, 243, 255, 0.5)" stroke="url(#avatarGrad)" strokeWidth="1.5" />
-                  
-                  {/* Futuristic Neck overlay */}
-                  <path d="M42 75 L58 75 L55 85 L45 85 Z" fill="rgba(167, 139, 250, 0.2)" stroke="rgba(167, 139, 250, 0.3)" />
-                  
-                  {/* Glowing collar nodes representing automation interface */}
-                  <circle cx="50" cy="85" r="2.5" fill="#A78BFA" className="animate-ping" />
-                  
-                  {/* Hood or Hair outline */}
-                  <path d="M28 65 C25 45, 30 25, 50 25 C70 25, 75 45, 72 65 C68 70, 32 70, 28 65 Z" fill="rgba(74, 58, 122, 0.15)" />
-                  
-                  {/* Face base */}
-                  <path d="M35 50 C35 38, 65 38, 65 50 C65 62, 35 62, 35 50 Z" fill="rgba(167, 139, 250, 0.08)" />
-                  
-                  {/* Hair cap */}
-                  <path d="M30 45 C35 30, 65 30, 70 45 L68 38 L32 38 Z" fill="url(#avatarGrad)" />
-                  
-                  {/* Tech specs / programmer glasses */}
-                  <rect x="38" y="47" width="10" height="5" rx="1" fill="none" stroke="#A78BFA" strokeWidth="2" />
-                  <rect x="52" y="47" width="10" height="5" rx="1" fill="none" stroke="#A78BFA" strokeWidth="2" />
-                  <line x1="48" y1="49" x2="52" y2="49" stroke="#A78BFA" strokeWidth="2" />
-                  
-                  {/* Glowing lenses glow */}
-                  <rect x="39" y="48" width="8" height="3" rx="0.5" fill="rgba(167, 139, 250, 0.3)" />
-                  <rect x="53" y="48" width="8" height="3" rx="0.5" fill="rgba(167, 139, 250, 0.3)" />
-
-                  {/* Neural line linking from temple */}
-                  <path d="M68 45 L80 35 L88 35" stroke="#F9A8D4" strokeWidth="1" strokeDasharray="1 1" />
-                  <circle cx="88" cy="35" r="2" fill="#F9A8D4" />
-                </svg>
+                {/* Styled modern profile photo container */}
+                <div className="w-44 h-44 rounded-2xl overflow-hidden border-4 border-purple-100 shadow-lg mb-4 bg-purple-50 group relative">
+                  <img 
+                    src={profileImage} 
+                    alt="Magapu Praise Portrait Photo" 
+                    referrerPolicy="no-referrer"
+                    className="w-full h-full object-cover object-top scale-100 group-hover:scale-105 transition-transform duration-500 ease-out"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-purple-500/10 to-transparent pointer-events-none" />
+                </div>
 
                 {/* Status Indicator */}
                 <span className="text-sm font-display font-medium text-[#1E293B] mb-0.5">Praise</span>

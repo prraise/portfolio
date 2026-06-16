@@ -1,0 +1,46 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Global safety net (Default-Deny all)
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Core validation helpers
+    function isValidId(id) {
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    // Helper to extract new incoming transaction shape
+    function incoming() {
+      return request.resource.data;
+    }
+
+    // Strict validation scheme mapping to coordinate fields
+    function isValidMessage(data) {
+      return data.keys().hasAll(['name', 'email', 'subject', 'message', 'createdAt'])
+        && data.keys().size() == 5
+        // Enforce strict types and standard lengths to avoid Denial of Wallet
+        && data.name is string && data.name.size() >= 1 && data.name.size() <= 150
+        && data.email is string && data.email.size() >= 3 && data.email.size() <= 150
+        && data.subject is string && data.subject.size() >= 1 && data.subject.size() <= 300
+        && data.message is string && data.message.size() >= 1 && data.message.size() <= 10000
+        // Temporal integrity: Force the write to match the server-side timestamp exactly
+        && data.createdAt == request.time;
+    }
+
+    // Mapping collections and guarding paths
+    match /messages/{messageId} {
+      // General PII Protection policy: No standard client holds rights to view messages
+      allow get: if false;
+      allow list: if false;
+
+      // Fully open to verified creates that pass strict validity schema matching
+      allow create: if isValidId(messageId) && isValidMessage(incoming());
+
+      // Read-only / Immutable messages safeguard once submitted
+      allow update, delete: if false;
+    }
+  }
+}

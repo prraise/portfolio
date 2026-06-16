@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Mail, Github, Linkedin, Send, AlertTriangle, CheckCircle, RefreshCw, Sparkles, MapPin } from "lucide-react";
+import { db, handleFirestoreError, OperationType } from "../firebase";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -12,6 +14,7 @@ export function Contact() {
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const [visitorName, setVisitorName] = useState("");
 
   const validate = () => {
@@ -34,17 +37,29 @@ export function Contact() {
     if (errors[name]) {
       setErrors((prev) => ({ ...prev, [name]: "" }));
     }
+    if (submitError) {
+      setSubmitError(null);
+    }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validate()) return;
 
     setIsSubmitting(true);
+    setSubmitError(null);
     setVisitorName(formData.name);
 
-    // Simulate reliable API pipeline submission
-    setTimeout(() => {
+    const pathForWrite = "messages";
+    try {
+      await addDoc(collection(db, pathForWrite), {
+        name: formData.name,
+        email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+        createdAt: serverTimestamp(),
+      });
+
       setIsSubmitting(false);
       setSubmitSuccess(true);
       setFormData({
@@ -53,7 +68,17 @@ export function Contact() {
         subject: "",
         message: "",
       });
-    }, 1500);
+    } catch (error) {
+      setIsSubmitting(false);
+      const userFriendlyMsg = error instanceof Error ? error.message : "Network error or permission restriction.";
+      setSubmitError(userFriendlyMsg);
+      console.error("Firestore message write failed: ", error);
+      try {
+        handleFirestoreError(error, OperationType.CREATE, pathForWrite);
+      } catch (logErr) {
+        // Handled logger error
+      }
+    }
   };
 
   return (
@@ -279,6 +304,16 @@ export function Contact() {
                       </p>
                     )}
                   </div>
+
+                  {submitError && (
+                    <div className="p-3 bg-red-50/85 border border-red-100 rounded-xl text-red-650 text-xs font-mono flex items-start gap-2 animate-fade-in">
+                      <AlertTriangle className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
+                      <div>
+                        <p className="font-bold text-red-700">Transmission Interrupted</p>
+                        <p className="text-[10px] text-red-600/90 leading-tight mt-0.5 font-sans font-semibold break-all max-w-full">{submitError}</p>
+                      </div>
+                    </div>
+                  )}
 
                   {/* Submit CTA button */}
                   <button
