@@ -1,6 +1,5 @@
 import { ArrowRight, Download, FileText, CheckCircle, Mail, Sparkles, BrainCircuit } from "lucide-react";
 import { useState } from "react";
-const profileImage = "https://files.catbox.moe/2v4y4d.jpeg";
 
 interface HeroProps {
   onOpenResumeModal: () => void;
@@ -129,63 +128,51 @@ export function Hero({ onOpenResumeModal, onSectionChange }: HeroProps) {
                   </div>
                 </div>
 
-                 {/* Main animated neural node panel */}
-                <div className="relative flex-grow rounded-2xl overflow-hidden shadow-inner border border-purple-100/50 bg-slate-50 flex items-center justify-center">
-                  <img
-                    src={profileImage}
-                    alt="Magapu Praise Profile"
-                    referrerPolicy="no-referrer"
-                    className="w-full h-full object-cover object-top scale-100 group-hover:scale-102 transition-transform duration-700 ease-out"
-                    style={{ minHeight: "260px" }}
-                  />
-                  <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-slate-950/20 to-transparent pointer-events-none" />
-                  
-                  {/* Real-time floating badge */}
-                  <div className="absolute bottom-3 left-3 bg-white/95 backdrop-blur-xs border border-purple-100 px-3 py-1 rounded-xl shadow-md flex items-center gap-1.5 font-sans">
-                    <span className="w-2 h-2 rounded-full bg-purple-500 animate-pulse" />
-                    <span className="text-[10px] font-bold text-slate-800">B.Tech CSE (AI)</span>
-                  </div>
-                </div>
+                  {/* Main animated neural node panel */}
+                 <div className="relative flex-grow rounded-2xl overflow-hidden shadow-inner border border-purple-100/50 bg-slate-50 flex flex-col items-center justify-center p-6 min-h-[265px]">
+                   <svg
+                     className="w-full h-40 text-purple-600"
+                     viewBox="0 0 200 100"
+                     fill="none"
+                     xmlns="http://www.w3.org/2000/svg"
+                   >
+                     {/* Graph Lines */}
+                     <path d="M20 50 L60 30" stroke="rgba(167,139,250,0.3)" strokeWidth="1.5" strokeDasharray="2 3" />
+                     <path d="M20 50 L60 70" stroke="rgba(167,139,250,0.3)" strokeWidth="1.5" />
+                     <path d="M60 30 L100 50" stroke="rgba(147,197,253,0.4)" strokeWidth="2" />
+                     <path d="M60 70 L100 50" stroke="rgba(147,197,253,0.4)" strokeWidth="2" strokeDasharray="3 3"/>
+                     <path d="M100 50 L140 25" stroke="rgba(249,168,212,0.5)" strokeWidth="1.5" />
+                     <path d="M100 50 L140 75" stroke="rgba(249,168,212,0.5)" strokeWidth="1.5" />
+                     <path d="M140 25 L180 50" stroke="rgba(147,197,253,0.2)" strokeWidth="1" />
+                     <path d="M140 75 L180 50" stroke="rgba(147,197,253,0.2)" strokeWidth="1" />
 
-                {/* Hide original panel content */}
-                <div className="hidden">
-                  <svg
-                    className="w-full h-40 text-slate-350"
-                    viewBox="0 0 200 100"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    {/* Graph Lines */}
-                    <path d="M20 50 L60 30" stroke="rgba(167,139,250,0.3)" strokeWidth="1.5" strokeDasharray="2 3" />
-                    <path d="M20 50 L60 70" stroke="rgba(167,139,250,0.3)" strokeWidth="1.5" />
-                    <path d="M60 30 L100 50" stroke="rgba(147,197,253,0.4)" strokeWidth="2" />
-                    <path d="M60 70 L100 50" stroke="rgba(147,197,253,0.4)" strokeWidth="2" strokeDasharray="3 3"/>
-                    <path d="M100 50 L140 25" stroke="rgba(249,168,212,0.5)" strokeWidth="1.5" />
-                    <path d="M100 50 L140 75" stroke="rgba(249,168,212,0.5)" strokeWidth="1.5" />
-                    <path d="M140 25 L180 50" stroke="rgba(147,197,253,0.2)" strokeWidth="1" />
-                    <path d="M140 75 L180 50" stroke="rgba(147,197,253,0.2)" strokeWidth="1" />
+                     {/* Left Node */}
+                     <circle cx="20" cy="50" r="6" fill="#A78BFA" className="animate-pulse" />
+                     <circle cx="20" cy="50" r="10" stroke="#A78BFA" strokeWidth="1" strokeOpacity="0.4" />
 
-                    {/* Left Node */}
-                    <circle cx="20" cy="50" r="6" fill="#A78BFA" className="animate-pulse" />
-                    <circle cx="20" cy="50" r="10" stroke="#A78BFA" strokeWidth="1" strokeOpacity="0.4" />
+                     {/* Middle Nodes */}
+                     <circle cx="60" cy="30" r="5" fill="#93C5FD" />
+                     <circle cx="60" cy="70" r="5" fill="#93C5FD" />
 
-                    {/* Middle Nodes */}
-                    <circle cx="60" cy="30" r="5" fill="#93C5FD" />
-                    <circle cx="60" cy="70" r="5" fill="#93C5FD" />
+                     {/* Central Brain Node */}
+                     <circle cx="100" cy="50" r="9" fill="#F9A8D4" />
+                     <circle cx="100" cy="50" r="15" stroke="#F9A8D4" strokeWidth="1" strokeOpacity="0.5" className="animate-ping" style={{animationDuration: '3s'}} />
 
-                    {/* Central Brain Node */}
-                    <circle cx="100" cy="50" r="9" fill="#F9A8D4" />
-                    <circle cx="100" cy="50" r="15" stroke="#F9A8D4" strokeWidth="1" strokeOpacity="0.5" className="animate-ping" style={{animationDuration: '3s'}} />
+                     {/* Out nodes */}
+                     <circle cx="140" cy="25" r="5" fill="#A78BFA" />
+                     <circle cx="140" cy="75" r="5" fill="#A78BFA" />
 
-                    {/* Out nodes */}
-                    <circle cx="140" cy="25" r="5" fill="#A78BFA" />
-                    <circle cx="140" cy="75" r="5" fill="#A78BFA" />
-
-                    {/* Far right terminal endpoint */}
-                    <circle cx="180" cy="50" r="6" fill="#86EFAC" />
-                  </svg>
-                  <p className="text-center font-mono text-[11px] text-purple-600 font-bold mt-2">Neural Net Optimization</p>
-                </div>
+                     {/* Far right terminal endpoint */}
+                     <circle cx="180" cy="50" r="6" fill="#86EFAC" />
+                   </svg>
+                   <p className="text-center font-mono text-[11px] text-purple-600 font-bold mt-2">Neural Net Optimization</p>
+                   
+                   {/* Real-time floating badge */}
+                   <div className="absolute bottom-3 left-3 bg-white/95 backdrop-blur-xs border border-purple-100 px-3 py-1 rounded-xl shadow-md flex items-center gap-1.5 font-sans">
+                     <span className="w-2 h-2 rounded-full bg-purple-500 animate-pulse" />
+                     <span className="text-[10px] font-bold text-slate-800">AI Neural Pipeline</span>
+                   </div>
+                 </div>
 
                 {/* Beautiful custom technical print terminal logs */}
                 <div className="bg-[#111827] rounded-xl p-3 border border-slate-800 font-mono text-[9.5px] text-[#A78BFA] space-y-1 text-left flex-shrink-0 mt-3 shadow-inner">
